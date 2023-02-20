@@ -53,7 +53,7 @@ describe("Harbor Sample Test", function () {
     }
   });
 
-  it("Restart router-cache", async function () {
+  it("Restart routerCache", async function () {
     testnet = await harbor.stop(testnet.name, "routerCache");
     let offChainActors = testnet.offChainActors();
     const actor = offChainActors["routerCache"];
@@ -64,12 +64,12 @@ describe("Harbor Sample Test", function () {
     expect(start_actor.status).to.equal("RUNNING");
   });
 
-  it("Assert and print sequencer-subscriber log", async function () {
+  it("Assert and print sequencerSubscriber log", async function () {
     if (typeof testnetName === "string") {
       testnet = await harbor.testnet(testnetName);
       const offChainActors = testnet.offChainActors();
       let success = false;
-      const actor = offChainActors.sequencerSubscriber;
+      const actor = offChainActors["sequencerSubscriber"];
       await actor.logs().then((logs) => {
         logs.forEach((log) => {
           if (log.message.includes("Sequencer config generated.")) {
