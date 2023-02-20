@@ -8,11 +8,11 @@ describe("Harbor Sample Test", function () {
   let testnet: Testnet;
 
   beforeAll(async () => {
-    testnetName = "TESTNET_NAME";
+    testnetName = "connext-testnet";
 
     harbor = new Harbor({
-      userKey: "USER_KEY",
-      projectKey: "PROJECT_KEY",
+      userKey: "wyBXi3jEHSYXnqBKosoJH3",
+      projectKey: "56JusKMRhQ4a6mUfL5QGAP",
     });
     await harbor.authenticate();
     if (typeof testnetName === "string") {
@@ -47,38 +47,20 @@ describe("Harbor Sample Test", function () {
 
   it("Checks if the Offchain actors exists", async function () {
     const offChainActors = testnet.offChainActors();
-    console.log(
-      `\n\n==========offChainActors(${
-        Object.keys(offChainActors).length
-      })==========`
-    );
-    console.log(offChainActors);
     for (const key in offChainActors) {
       const actor = offChainActors[key];
       expect(actor.status).to.equal("RUNNING");
-      console.log(
-        `${actor.name} - ${actor.status} - ${actor.ports()} - ${actor.endpoint}`
-      );
     }
   });
 
   it("Restart router-cache", async function () {
-    console.log("Stopping router-cache");
     testnet = await harbor.stop(testnet.name, "routerCache");
     let offChainActors = testnet.offChainActors();
-    const actor = offChainActors.routerCache;
-    console.log(`${actor.name} - ${actor.status}`);
+    const actor = offChainActors["routerCache"];
     expect(actor.status).to.equal("STOPPED");
-
-    console.log("Starting router-cache");
     testnet = await harbor.start(testnet.name, "routerCache");
     offChainActors = testnet.offChainActors();
-    const start_actor = offChainActors.routerCache;
-    console.log(
-      `${start_actor.name} - ${start_actor.status} - ${start_actor.ports()} - ${
-        start_actor.endpoint
-      }`
-    );
+    const start_actor = offChainActors["routerCache"];
     expect(start_actor.status).to.equal("RUNNING");
   });
 
