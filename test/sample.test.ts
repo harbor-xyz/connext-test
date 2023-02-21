@@ -10,9 +10,10 @@ describe("Harbor Sample Test", function () {
   beforeAll(async () => {
     testnetName = "connext-testnet";
 
+    // add your userKeys and projectKeys here!
     harbor = new Harbor({
-      userKey: "wyBXi3jEHSYXnqBKosoJH3",
-      projectKey: "56JusKMRhQ4a6mUfL5QGAP",
+      userKey: "",
+      projectKey: "",
     });
     await harbor.authenticate();
     if (typeof testnetName === "string") {
