@@ -655,19 +655,19 @@
     command-exists "^1.2.9"
     ts-interface-checker "^0.1.9"
 
-"@harbor-xyz/harbor-cli@^0.4.5":
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/@harbor-xyz/harbor-cli/-/harbor-cli-0.4.5.tgz#7c0d845b8f1dcd9191b98278070961592803b54a"
-  integrity sha512-yVLhj9WmB/tFl4SuFGV+mPgPKSDYZeOSDZ3AMJ3u35JxsZulA7cThuMLyvgdrwO80Al8DbXNCys0i2XpyHQl6A==
+"@harbor-xyz/harbor-cli@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@harbor-xyz/harbor-cli/-/harbor-cli-0.5.0.tgz#b9a0453f7bf78458d5be7142c7f9a55965dd6206"
+  integrity sha512-QVpjMf5HDpDipR7O4GBad1NfzBBFzCD1Iyr+oBUyUOMSHaExMvmiIv4Ad6fEUd1+VXvpxx0eXSv+Kp3r28Nkiw==
   dependencies:
     mkdirp "^1.0.4"
 
-"@harbor-xyz/harbor@0.4.5":
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/@harbor-xyz/harbor/-/harbor-0.4.5.tgz#721c34a89ddfc5d91dea3c7bd66fc65a8968e773"
-  integrity sha512-1qA8ukR+bL/GND31QKfDD4E94ppscBIl+EDMabL30f5oDpZQ4xlUkOvlN/SqM6efm4euap8kj27WRNl9zHeahw==
+"@harbor-xyz/harbor@0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@harbor-xyz/harbor/-/harbor-0.5.0.tgz#3461c32e1f80a6d002b13773b99034cdc3d75060"
+  integrity sha512-PwBdSPCsLe9ExZ2kgckvHzqlk9pXDUEOOlxw2BUDqziO1xp6n4YTNyLRwoKC/ZOUvaCSpeaPh5lyCxxOK/ibyg==
   dependencies:
-    "@harbor-xyz/harbor-cli" "^0.4.5"
+    "@harbor-xyz/harbor-cli" "^0.5.0"
     isomorphic-unfetch "^3.1.0"
     project-bin-path "^2.0.0"
 
